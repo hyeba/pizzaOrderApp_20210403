@@ -11,7 +11,6 @@ class MainViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
         return when(position){
             0 -> PizzaStoreListFragment()
             else -> MyProfileFragment()
-
         }
     }
 
