@@ -7,9 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.neppplus.pizzaorderapp_20210403.R
+import com.neppplus.pizzaorderapp_20210403.ViewStoreDatailActivity
 import com.neppplus.pizzaorderapp_20210403.adapters.StoreAdapter
 import com.neppplus.pizzaorderapp_20210403.datas.Store
+import kotlinx.android.synthetic.main.activity_view_store_datail.*
 import kotlinx.android.synthetic.main.fragment_pizza_store_list.*
+import kotlinx.android.synthetic.main.store_list_item.*
+import kotlinx.android.synthetic.main.store_list_item.storeNameTxt
 
 class PizzaStoreListFragment : Fragment() {
 
@@ -40,7 +44,10 @@ class PizzaStoreListFragment : Fragment() {
 
             val clickedStore = mPizzaStoreList[position]
 
-//            val myIntent = Intent(activity, )
+
+            val myIntent = Intent(activity, ViewStoreDatailActivity::class.java)
+            myIntent.putExtra("store", clickedStore)
+            startActivity(myIntent)
 
         }
 
